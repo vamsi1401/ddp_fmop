@@ -1,0 +1,334 @@
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',61,1)">61  </a>K = [5,6] ;
+if system_dependent('IsDebugMode')==1, dbquit; end
+trainmodel
+{Error using <a href="matlab:helpUtils.errorDocCallback('trainmodel', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m', 5)" style="font-weight:bold">trainmodel</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',5,0)">line 5</a>)
+Not enough input arguments.
+} 
+clear
+test
+done test_data
+[Warning: File not found or permission denied] 
+[> In <a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',6,1)">trainmodel at 6</a>
+  In <a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m',23,1)">test at 23</a>] 
+Using 6.0 GB
+{Error using <a href="matlab:helpUtils.errorDocCallback('zeros')" style="font-weight:bold">zeros</a>
+Out of memory. Type HELP MEMORY for your options.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('train', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m', 56)" style="font-weight:bold">train</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',56,0)">line 56</a>)
+qp.x   = zeros(len,nmax,'single');
+
+Error in <a href="matlab:helpUtils.errorDocCallback('trainmodel', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m', 80)" style="font-weight:bold">trainmodel</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',80,0)">line 80</a>)
+ model = train(cls,model,pos,neg,0,1);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('test', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m', 23)" style="font-weight:bold">test</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m',23,0)">line 23</a>)
+model = trainmodel(name,pos,neg,K,pa,sbin);
+} 
+helpUtils.errorDocCallback('train', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m', 56)
+help memory
+ <strong>memory</strong> Memory information.
+    See 'doc memory' for more information on how to make the
+    best use of memory when running MATLAB.
+ 
+    <strong>memory</strong> when called without an output argument displays
+    information about how much memory is available and how
+    much is currently being used by MATLAB. All values are double
+    precision and in units of bytes.
+ 
+    USERVIEW = <strong>memory</strong> returns information about how much memory is
+    available and how much is currently being used by MATLAB. USERVIEW
+    is a structure that contains the following fields:
+       MaxPossibleArrayBytes -- The largest contiguous free memory block.
+          It is an upper bound on the largest single array that MATLAB can
+          currently create. This field is the smaller of these two values:
+             a) The largest contiguous memory block found in the
+                MATLAB virtual address space, or
+             b) The total available system memory.
+          To find the number of elements, divide MaxPossibleArrayBytes
+          by the size of each element in bytes. For example, divide by
+          eight for a double matrix. The actual number of elements that
+          that can be created is always less than this number.
+       MemAvailableAllArrays -- The total amount of memory available
+          for data. This field is the smaller of these two values:
+             a) The total available MATLAB virtual address space, or
+             b) The total available system memory.
+          The amount of memory available is guaranteed to be at least
+          as large as this field.
+       MemUsedMATLAB -- The total amount of system memory reserved for the
+          MATLAB process. This is the sum of the physical memory and
+          potential swap file usage.
+ 
+    [USERVIEW, SYSTEMVIEW] = <strong>memory</strong> returns additional, and more detailed
+    information about the current state of memory usage.  SYSTEMVIEW is a 
+    structure containing the following:
+       VirtualAddressSpace -- A 2-field structure that contains the
+          amount of available memory and the total amount of virtual
+          memory for the MATLAB process.
+       SystemMemory -- A 1-field structure that contains the amount of
+          available system memory. This number includes the amount of
+          available physical memory and the amount of available swap file 
+          space on the computer running MATLAB.
+       PhysicalMemory -- A 2-field structure that contains the amount of
+          available physical memory and the total amount of physical memory
+          on the computer running MATLAB.  It can be useful as a measure
+          of how much data can be accessed quickly.
+ 
+    The <strong>memory</strong> function is currently available on PCWIN and PCWIN64 only.
+    Results will vary depending on the computer running MATLAB, the load
+    on the computer, and what MATLAB is doing at the time.
+ 
+    Example 1: Run the <strong>memory</strong> command on a 32-bit Windows system:
+ 
+        >> memory
+        Maximum possible array:             677 MB (7.101e+008 bytes) *
+        Memory available for all arrays:   1602 MB (1.680e+009 bytes) **
+        Memory used by MATLAB:              327 MB (3.425e+008 bytes)
+        Physical Memory (RAM):             3327 MB (3.489e+009 bytes)
+ 
+        *  Limited by contiguous virtual address space available.
+        ** Limited by virtual address space available.
+        >>
+         
+    Example 2: Run the <strong>memory</strong> command on a 64-bit Windows system:
+ 
+        >> memory
+        Maximum possible array:               4577 MB (4.800e+009 bytes) *
+        Memory available for all arrays:      4577 MB (4.800e+009 bytes) *
+        Memory used by MATLAB:                 330 MB (3.458e+008 bytes)
+        Physical Memory (RAM):                3503 MB (3.674e+009 bytes)
+ 
+        *  Limited by System Memory (physical + swap file) available.
+        >> 
+ 
+    Example 3: Run the <strong>memory</strong> command with two outputs on a 32-bit Windows
+               system:
+ 
+        >> [uV sV] = memory
+ 
+        uV = 
+ 
+            MaxPossibleArrayBytes: 710127616
+            MemAvailableAllArrays: 1.6797e+009
+                    MemUsedMATLAB: 345354240
+ 
+ 
+        sV = 
+ 
+            VirtualAddressSpace: [1x1 struct]
+                   SystemMemory: [1x1 struct]
+                 PhysicalMemory: [1x1 struct]
+ 
+        >> sV.VirtualAddressSpace
+ 
+        ans = 
+ 
+            Available: 1.6797e+009
+                Total: 2.1474e+009
+ 
+        >> sV.SystemMemory
+ 
+        ans = 
+ 
+            Available: 4.4288e+009
+ 
+        >> sV.PhysicalMemory
+ 
+        ans = 
+ 
+            Available: 2.5376e+009
+                Total: 3.4889e+009
+
+    Reference page in Help browser
+       <a href="matlab:doc memory">doc memory</a>
+
+load('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\cache\TEST_part_2_mix_6.mat')
+clear
+test
+done test_data
+[Warning: File not found or permission denied] 
+[> In <a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',6,1)">trainmodel at 6</a>
+  In <a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m',23,1)">test at 23</a>] 
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',61,1)">61  </a>K = [5,6] ;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',62,1)">62  </a>clear model ;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',63,1)">63  </a>load('cache/TEST_part_1_mix_5.mat') ;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',64,1)">64  </a>filters(1:5) = model.filters(1:5) ;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',65,1)">65  </a>load('cache/TEST_part_2_mix_1.mat') ;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',66,1)">66  </a>model.bias(1:6)= model.bias;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',67,1)">67  </a>model.filters(2:6) = filters(1:5);
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',68,1)">68  </a>model.len = model.len * 6 ;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',69,1)">69  </a>save('cache/TEST_part_2_mix_6.mat', 'model') ;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',71,1)">71  </a>model = buildmodel(name,model,def,idx,K,pa);
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',5,1)">5   </a>globals;
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\globals.m',2,1)">2   </a>addpath learning;
+dbstep out
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',7,1)">7   </a>jointmodel.bias    = struct('w',{},'i',{});
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',8,1)">8   </a>jointmodel.filters = struct('w',{},'i',{});
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',9,1)">9   </a>jointmodel.defs    = struct('w',{},'i',{},'anchor',{});
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',10,1)">10  </a>jointmodel.components{1} = struct('biasid',{},'filterid',{},'defid',{},'parent',{});
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',12,1)">12  </a>jointmodel.pa = pa;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',13,1)">13  </a>jointmodel.maxsize  = model.maxsize;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',14,1)">14  </a>jointmodel.interval = model.interval;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',15,1)">15  </a>jointmodel.sbin = model.sbin;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',16,1)">16  </a>jointmodel.len = 0;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',19,1)">19  </a>for i = 1:length(pa)
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',20,1)">20  </a>  child = i;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',21,1)">21  </a>  parent = pa(child);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',22,1)">22  </a>  assert(parent < child);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',24,1)">24  </a>  cls = [name '_part_' num2str(child) '_mix_' num2str(K(i))];
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',25,1)">25  </a>  load([cachedir cls]);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',28,1)">28  </a>  p.biasid = [];
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',29,1)">29  </a>  if parent == 0
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',30,1)">30  </a>    nb  = length(jointmodel.bias);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',31,1)">31  </a>    b.w = 0;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',32,1)">32  </a>    b.i = jointmodel.len + 1;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',33,1)">33  </a>    jointmodel.bias(nb+1) = b;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',34,1)">34  </a>    jointmodel.len = jointmodel.len + numel(b.w);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',35,1)">35  </a>    p.biasid = nb+1;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',51,1)">51  </a>  p.filterid = [];
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',52,1)">52  </a>  for k = 1:max(idx{child})    
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',53,1)">53  </a>    nf  = length(jointmodel.filters);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',54,1)">54  </a>    f.w = model.filters(k).w;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',55,1)">55  </a>    f.i = jointmodel.len + 1;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',56,1)">56  </a>    jointmodel.filters(nf+1) = f;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',57,1)">57  </a>    jointmodel.len = jointmodel.len + numel(f.w);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',58,1)">58  </a>    p.filterid = [p.filterid nf+1];
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',59,1)">59  </a>  end
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\buildmodel.m',53,1)">53  </a>    nf  = length(jointmodel.filters);
+dbstep out
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',73,1)">73  </a>cls = [name '_final_' num2str(K')'];
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',74,1)">74  </a>try
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',75,1)">75  </a> load([cachedir cls]);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',76,1)">76  </a>catch
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',77,1)">77  </a> if isfield(pos,'mix')
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',80,1)">80  </a> model = train(cls,model,pos,neg,0,1);
+dbstep
+Using 6.0 GB
+{Error using <a href="matlab:helpUtils.errorDocCallback('zeros')" style="font-weight:bold">zeros</a>
+Out of memory. Type HELP MEMORY for your options.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('train', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m', 56)" style="font-weight:bold">train</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',56,0)">line 56</a>)
+qp.x   = zeros(len,nmax,'single');
+
+Error in <a href="matlab:helpUtils.errorDocCallback('trainmodel', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m', 80)" style="font-weight:bold">trainmodel</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',80,0)">line 80</a>)
+ model = train(cls,model,pos,neg,0,1);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('test', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m', 23)" style="font-weight:bold">test</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m',23,0)">line 23</a>)
+model = trainmodel(name,pos,neg,K,pa,sbin);
+} 
+clear
+test
+done test_data
+[Warning: File not found or permission denied] 
+[> In <a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',6,1)">trainmodel at 6</a>
+  In <a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m',23,1)">test at 23</a>] 
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',61,1)">61  </a>K = [5,6] ;
+if system_dependent('IsDebugMode')==1, dbcont; end
+dbstep in
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',15,1)">15  </a>if nargin < 6
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',19,1)">19  </a>if nargin < 7
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',20,1)">20  </a>  C = 0.002;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',21,1)">21  </a>end
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',23,1)">23  </a>if nargin < 8
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',24,1)">24  </a>  wpos = 2;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',25,1)">25  </a>end
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',27,1)">27  </a>if nargin < 9
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',30,1)">30  </a>  no_sv = (wpos+1) * length(pos);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',31,1)">31  </a>  maxsize = 10 * no_sv * 4 * sparselen(model) / 1e9;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',32,1)">32  </a>  maxsize = min(max(maxsize,6),7.5);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',33,1)">33  </a>end
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',35,1)">35  </a>fprintf('Using %.1f GB\n',maxsize);
+dbstep
+Using 6.0 GB
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',37,1)">37  </a>if nargin < 10
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',38,1)">38  </a>  overlap = 0.6;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',39,1)">39  </a>end
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',42,1)">42  </a>len  = sparselen(model);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',43,1)">43  </a>nmax = round(maxsize*.25e9/len);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',45,1)">45  </a>rand('state',0);
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',46,1)">46  </a>globals;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',49,1)">49  </a>clear global qp;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',50,1)">50  </a>global qp;
+dbstep
+<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',56,1)">56  </a>qp.x   = zeros(len,nmax,'single');
+dbstep
+{Error using <a href="matlab:helpUtils.errorDocCallback('zeros')" style="font-weight:bold">zeros</a>
+Out of memory. Type HELP MEMORY for your options.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('train', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m', 56)" style="font-weight:bold">train</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\train.m',56,0)">line 56</a>)
+qp.x   = zeros(len,nmax,'single');
+
+Error in <a href="matlab:helpUtils.errorDocCallback('trainmodel', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m', 80)" style="font-weight:bold">trainmodel</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\learning\trainmodel.m',80,0)">line 80</a>)
+ model = train(cls,model,pos,neg,0,1);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('test', 'C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m', 23)" style="font-weight:bold">test</a> (<a href="matlab: opentoline('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\test.m',23,0)">line 23</a>)
+model = trainmodel(name,pos,neg,K,pa,sbin);
+} 
+load('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\cache\TEST_part_2_mix_6.mat')
+load('C:\Users\Vamsi\Downloads\acads\sem 9\ddp\ddp_fmop\code-full\cache\TEST_part_2_mix_6.mat')
