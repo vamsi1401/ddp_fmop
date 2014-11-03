@@ -1,0 +1,20 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Explicit paths specified without -i or -o; assuming --only paths...
+# On branch master
+# Your branch is up-to-date with 'ddp/master'.
+#
+# Changes to be committed:
+#	modified:   code-basic/demo.m
+#	modified:   code-basic/mex_pc/dt.mexw64
+#	modified:   code-basic/mex_pc/fconv.mexw64
+#	modified:   code-basic/mex_pc/features.mexw64
+#	modified:   code-basic/mex_pc/reduce.mexw64
+#	modified:   code-basic/mex_pc/resize.mexw64
+#	modified:   code-basic/mex_pc/shiftdt.mexw64
+#
+# Untracked files:
+#	code-full/test_data.asv
+#
+
