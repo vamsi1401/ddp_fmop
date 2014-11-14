@@ -31,6 +31,12 @@ catch
   pos = [];
   numpos = 0;
   for fr = trainfrs_pos
+    temp(1,:) = data(fr,6:7) + data(fr,8:9)/2 ;
+    temp(2,:) = data(fr,2:3) + data(fr,4:5)/2 ;
+    pos(numpos).point = temp;
+    if temp(2,2) < 140
+        continue ;
+    end
     numpos = numpos + 1;
     n = data(fr,1) ;
     pos(numpos).im = sprintf(posims,n);
@@ -42,9 +48,6 @@ catch
     pos(numpos).x2(2,1) = data(fr,2) + data(fr,4);
     pos(numpos).y2(1,1) = data(fr,7) + data(fr,9);
     pos(numpos).y2(2,1) = data(fr,3) + data(fr,5);
-    temp(1,:) = data(fr,6:7) + data(fr,8:9)/2 ;
-    temp(2,:) = data(fr,2:3) + data(fr,4:5)/2 ;
-    pos(numpos).point = temp;
   end
 
 
